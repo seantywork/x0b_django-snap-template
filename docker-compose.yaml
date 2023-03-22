@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+        db:
+                build: ./mysql
+                container_name: db
+                ports:
+                        - "3306:3306"
+
+        web:
+                build: ./djangosnap
+                container_name: web
+                ports:
+                        - "8000:8000"
+                depends_on:
+                        - db
+               
+
+        traffic:
+                build: ./nginx
+                container_name: traffic
+                ports:
+                        - "5005:5005"
+                depends_on:
+                        - web
+               
+
+
+
