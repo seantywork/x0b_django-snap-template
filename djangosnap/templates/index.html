@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Usage Corpus</title>
+  <title>Django Snap Template</title>
 
 
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
       <div class="row">
         <div class="col-md-8">
           <h1>
-            Usage Corpus Beta
+            Django Snap Template
           </h1>
         </div>
         <div class="col-md-4" id="app-img-switch">
@@ -38,26 +38,14 @@
       <div class="row">
         <div class="col-md-6">
           <p>
-            Contact [ seantywork@gmail.com ] for authorization. Once granted, the auth code is effective up to 10
-            queries.
+            Type in a word you want to search for<br>
           </p>
-          <p>
-            Result page will display maximum 10 results if a matching entry and corresponding usage exist in the DB.
-          </p>
-          <p>
-            Let the SUPER_CAT do the fetching and see how adorably he does that!
           </p>
             <div class="form-group">
               <label for="exampleInputEmail1">
                 Query
               </label>
-              <input type="text" class="form-control" id="input-query" placeholder="Word or Phrase" required>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">
-                Passcode
-              </label>
-              <input type="password" class="form-control" id="input-psw" placeholder="Passcode" required>
+              <input type="text" class="form-control" id="input-query" placeholder="Word" required>
             </div>
             <button class="btn btn-primary" onclick="goFetch()">
               Enter

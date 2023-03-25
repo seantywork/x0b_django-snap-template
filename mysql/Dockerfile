@@ -6,5 +6,6 @@ ENV MYSQL_HOST localhost
 
 EXPOSE 3306
 
+ADD ./words_alpha.csv /var/lib/mysql-files/
 ADD ./init.sql /docker-entrypoint-initdb.d
      

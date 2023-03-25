@@ -20,8 +20,8 @@ from ..views import views
 urlpatterns = [
     #path('admin/', admin.site.urls),
     #path('',views.ready,name='Maintenance')
-    path('',views.passme,name='passme'),
-    path('sendme',views.sendme,name='sendme')
+    path('',views.getIndex,name='getIndex'),
+    path('sendme',views.searchWord,name='searchWord')
 ]
 
 

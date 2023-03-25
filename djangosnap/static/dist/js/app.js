@@ -6,19 +6,17 @@ async function goFetch(){
 
     var query = $('#input-query').val() 
 
-    var psw = $('#input-psw').val()
-
-    var req_data = {"query":query,"psw":psw}
+    var req_data = {"query":query}
 
     var resp = await axios.post('/sendme', req_data)
 
     
     var resp_data = resp.data
 
-    if (resp_data["status"] == 'n'){
+    if (resp_data["STATUS"] == 'n'){
 
 
-        var message = resp_data["res"]
+        var message = resp_data["RES"]
 
         var error_html = `
              
@@ -41,14 +39,14 @@ async function goFetch(){
 
     } else {
 
-        var records = resp_data["res"]
+        var records = resp_data["RES"]
 
 
         var result_html  = `
         <thead>
           <tr>
-            <th>ENTRY </th>
-            <th> USAGE</th>
+            <th>Index </th>
+            <th> Word</th>
           </tr>
         </thead>
         <tbody id="app-result-render-body">
@@ -60,14 +58,14 @@ async function goFetch(){
 
         for (let i=0;i<records.length;i++){
 
-            var entry = records[i]["ENTRY"]
+            var res_idx = records[i]["IDX"]
 
-            var usage = records[i]["USAGE"]
+            var res_word = records[i]["WORD"]
 
             var body_html = `
             <tr>
-                <td> ${entry} </td>
-                <td> ${usage} </td>
+                <td> ${res_idx} </td>
+                <td> ${res_word} </td>
             </tr>
             
             `
